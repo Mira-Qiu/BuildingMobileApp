@@ -1,4 +1,4 @@
-## Lesson 1  Setup ionic
+# Lesson 1  Setup ionic
 **1. Install the Inoic CLI**<br>
 Install: <code>npm install -g ionic</code> <br>
 Check Version: <code>ionic --version</code> <br> 
@@ -14,7 +14,7 @@ Templates aside from <code>blank</code> and it is very useful if they closedly m
 <code>ionic serve</code><br>
 This will open up a new browser with your application open in it and running on a local web server.<br><br>
 
-## Lession 2  Various files and folders contained within your project
+# Lession 2  Various files and folders contained within your project
 ### src
 This folder contains most of the files and folders that you will actually be working on to create your application<br>
 ### app
@@ -40,4 +40,13 @@ Most of the code for your application will live inside of this app folder:<br>
       *.page.html 定义样本/view <br>
     *.page.scss 定义式样<br></ul></ul>
 
-    
+<ul><strong>www</strong><br>
+  The <strong>www</strong> folder contains output of the build process for application, 并且这里的代码是用户使用这个应用时真正运行的代码，尽量不要动这个文件。如果分布这个应用带网上，这个code folder就是上传到server hosting the application.</ul><br>
+<ul><strong>package.json</strong><br>
+  configuration information for your project. it lists all the dependencies(external libraries/packages required to make your project work) for your application.<br></ul>
+ 
+ ```
+  import {Component } from '@angular/core';
+  ```
+  <ul>从 <code>@angular/core</code> 导出 package.<br></ul>
+
