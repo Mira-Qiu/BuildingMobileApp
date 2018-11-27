@@ -189,3 +189,10 @@ import { SomePage } from '../some-page/some-page.page';
 Importing <code>Component</code> from <code>@angular/core</code> which allows us use the <code>@Component</code> decorator, and **ModalController** from the Ionic library which we can use to create modal overlays(pop up a page on top of our current page)<br>
 <br>
 Also, importing **SomePage** which is a class/component of our own createion.The path for this simply follows the directory structure of your project, we have the **SomePage** component defined inside a folder called pages which is one level above the current file. <br>
+Import 应该连接到 .ts 文件的位置，但不需要加.ts。如果文件在相同的文件夹里，<code>./the-file</code>。如果需要上一级文件夹连接到这个文件用../，如果上两级，../../my-coolpage/the-file.<br>
+接下来，装饰器，用来定义selector(the name this conponent will have in our DOM(Document Object Model), 
+
+```
+<app-page-home></app-page-home>
+```
+and the template.
