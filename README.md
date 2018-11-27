@@ -50,3 +50,37 @@ Most of the code for your application will live inside of this app folder:<br>
   ```
   <ul>从 <code>@angular/core</code> 导出 package.<br></ul>
 
+# Lesson 3 : Ionic CLI Commands
+### Serving your Application
+View the Ionic application which you working on in the browswer by running:
+
+```
+ionic serve
+```
+
+**Ionic Lab** which will display your project in the ionic lab interface. This will give you side-by-side comparison of iOS and Android:<br>
+Install the package:
+
+```
+npm install --save @ionic/lab
+```
+then, you can add <code>-l</code>flag to the <code>serve</code> command:
+
+```
+ionic serve -l
+```
+
+### Generate
+To create more components, you can just <code>ionic generate</code> command to do it automatically with some handy boilerplate code in place.<br>
+* page
+* component
+* directive
+* service
+To use the command you just run or you can manually supply teh name of your page/component/directive/service to the command like:
+
+```
+ionic g page
+ionic g page/MyPage
+ionic g service services/MyService
+```
+
