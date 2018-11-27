@@ -31,6 +31,13 @@ Most of the code for your application will live inside of this app folder:<br>
     <ion-router-outlet></ion-router-outlet>
 </ion-app>
 ```
-<code>\<ion-router-outlet\></code>控制那些组件被显示给用户（基于现在的路径）。如果用户在<code>/Home</code>路径，那么，home page 会显示。<br></ul>
- 
- 
+<code>\<ion-router-outlet\></code>控制哪些组件被显示给用户（基于现在的路径）。如果用户在<code>/Home</code>路径，那么，home page 会显示。<br></ul>
+<ul><strong>pages</strong><br>
+ The pages folder contain all the pages for our application: home page, login page, product detail page...<br>
+  A page/component is made up primarily of:<br>
+  <ul>*.module.ts导入需要的方程<br>
+      *.page.ts 定义逻辑/行为关系与相关的页面<br>
+      *.page.html 定义样本/view <br>
+    *.page.scss 定义式样<br></ul></ul>
+
+    
