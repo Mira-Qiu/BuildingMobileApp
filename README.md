@@ -51,7 +51,7 @@ Most of the code for your application will live inside of this app folder:<br>
   <ul>从 <code>@angular/core</code> 导出 package.<br></ul>
 
 # Lesson 3 : Ionic CLI Commands
-### Serving your Application
+### 1. Serving your Application
 View the Ionic application which you working on in the browswer by running:
 
 ```
@@ -70,7 +70,7 @@ then, you can add <code>-l</code>flag to the <code>serve</code> command:
 ionic serve -l
 ```
 
-### Generate
+### 2. Generate
 To create more components, you can just <code>ionic generate</code> command to do it automatically with some handy boilerplate code in place.<br>
 * page
 * component
@@ -83,4 +83,91 @@ ionic g page
 ionic g page/MyPage
 ionic g service services/MyService
 ```
+
+### 3. Installing Packages or Plugins
+
+```
+npm install some-package --save
+ionic cordova plugin add some-plugin
+cordova plugin add some-plugin
+```
+If you want to use Ionic Native to access the plugin, you should install the Ionic Native as well. **DO NOT** DO THIS IF YOU USING CAPACITOR.
+
+```
+npm install @ionic-native/some-plugin@beta --save
+```
+**NOTE** During the beta period, it is important that you install Ionic Native plugins using the <code>@beta</code> version. When importing plugins from Ionic Native into your project you should also import from <code>/ngx</code> e.g:
+
+```
+import { Facebook } from '@ionic-native/facebook/ngx';
+```
+
+### 4. Creating a Build
+Most time we use <code>serve</code> to run our application, 有时会需要 create a build 在www 文件内，可以之间进入。当你要run your code on the web. To create a build:
+
+```
+ionic build
+```
+or to create an optimised production build you can run:
+
+```
+ionic build --prod
+```
+### 5. Using Capacitor
+
+Ionic  CLI has integrations for Capacitor. To initialise Capacitor in your project you can just add a platform:
+
+```
+ionic cap add android
+//or
+ionic cap add ios
+```
+To sync your project with Capacitor. This will copy over your built application from the <code>www</code> folder:
+
+```
+ionic cap sync
+// or
+ionic cap update
+```
+
+# Lession 4 : Decorators
+# Lession 5 : Classes
+### 1. What is a class?
+
+```
+class Person {
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+  setAge(age){
+    this.age = age;
+    return true;
+  }
+  getAge(){
+   return this.age;
+  }
+  setName(name){
+    this.name = name;
+    return true;
+  }
+  getName(){
+    return this.name
+  }
+  isOld(){
+    return this.age > 70;
+  }
+}
+```
+<code>constructor</code> is run whenever we create an instance of this class. Once we have our class defined which acts as blueprint for creating objects, we could create a new **Person** objects like this:
+
+```
+let john = new Person('John', 32);
+let louise = new Person('Louise', 28);
+let david = new Person('David', 72);
+console.log(john.isOld());
+console.log(louise.isOld());
+console.log(david.isOld());
+```
+
 
