@@ -23,7 +23,7 @@ Most of the code for your application will live inside of this app folder:<br>
   Module files use an Angular concept call <code> @NgModule</code>. The basic idea is that modules allow an application to be split up into "chunks" of related functionality.大部分时间不用动这些文件。</ul>
 <ul><strong>app-routing.module.ts</strong><br>
   Creates a module called<code>AppRoutingModule</code>which is then imported into the root module.目的是定义应用中使用的routes. 简单来说，我们想定义URL matches up to which component/page.如果用户去<code>/home</code>路径，我们经常显示 home page/component. 这并不需要放在它自己的module，you could just set these routes up directly in the main root module<br></ul>
-<ul><strong>app.component.html</code><br>
+<ul><strong>app.component.html</strong></code><br>
   这个文件夹里包含一个根元件的样板：<br></ul>
   
 ```
