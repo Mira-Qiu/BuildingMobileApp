@@ -170,4 +170,22 @@ console.log(louise.isOld());
 console.log(david.isOld());
 ```
 
+What a class looks like in Inonic:
 
+```
+import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { SomePage } from '../some-page/some-page.page';
+ @Component({
+    selector: 'app-page-home',
+    templateUrl: 'home.page.html',
+    styleUrls: ['home.page.scss']
+  })
+  export class HomePage {
+    constructor(private modalCtrl: ModalController){
+  }
+}
+```
+Importing <code>Component</code> from <code>@angular/core</code> which allows us use the <code>@Component</code> decorator, and **ModalController** from the Ionic library which we can use to create modal overlays(pop up a page on top of our current page)<br>
+<br>
+Also, importing **SomePage** which is a class/component of our own createion.The path for this simply follows the directory structure of your project, we have the **SomePage** component defined inside a folder called pages which is one level above the current file. <br>
