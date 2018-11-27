@@ -24,12 +24,13 @@ Most of the code for your application will live inside of this app folder:<br>
 <ul><strong>app-routing.module.ts</strong><br>
   Creates a module called<code>AppRoutingModule</code>which is then imported into the root module.目的是定义应用中使用的routes. 简单来说，我们想定义URL matches up to which component/page.如果用户去<code>/home</code>路径，我们经常显示 home page/component. 这并不需要放在它自己的module，you could just set these routes up directly in the main root module<br></ul>
 <ul><strong>app.component.html</strong></code><br>
-  这个文件夹里包含一个根元件的样板：<br></ul>
+  这个文件夹里包含一个根元件的样板：<br>
   
 ```
 <ion-app>
     <ion-router-outlet></ion-router-outlet>
 </ion-app>
 ```
+<code><ion-router-outlet></code>控制那些组件被显示给用户（基于现在的路径）。如果用户在<code>/Home</code>路径，那么，home page 会显示。<br></ul>
  
  
