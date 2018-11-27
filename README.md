@@ -31,6 +31,6 @@ Most of the code for your application will live inside of this app folder:<br>
     <ion-router-outlet></ion-router-outlet>
 </ion-app>
 ```
-<code><ion-router-outlet></code>控制那些组件被显示给用户（基于现在的路径）。如果用户在<code>/Home</code>路径，那么，home page 会显示。<br></ul>
+<code>\<ion-router-outlet\></code>控制那些组件被显示给用户（基于现在的路径）。如果用户在<code>/Home</code>路径，那么，home page 会显示。<br></ul>
  
  
