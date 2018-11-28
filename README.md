@@ -79,8 +79,8 @@ To create more components, you can just <code>ionic generate</code> command to d
 To use the command you just run or you can manually supply teh name of your page/component/directive/service to the command like:
 
 ```
-ionic g page
-ionic g page/MyPage
+ionic g page page
+ionic g page pages/MyPage
 ionic g service services/MyService
 ```
 
